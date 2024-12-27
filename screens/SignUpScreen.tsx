@@ -1,3 +1,17 @@
+// import {Text, View} from 'react-native';
+// import React from 'react';
+
+// const SigninScreen = () => {
+//   return (
+//     <View>
+//       <Text>Signin Page</Text>
+//     </View>
+//   );
+// };
+
+// export default SigninScreen;
+
+// const styles = StyleSheet.create({})
 import React, {useState} from 'react';
 import {View, Text, TextInput, Button, StyleSheet, Alert} from 'react-native';
 import {Formik} from 'formik';
@@ -55,6 +69,8 @@ const SignUpScreen: React.FC = (props: any) => {
   });
 
   const handleSignUp = async (values: SignUpValues, {resetForm}: any) => {
+    // Alert.alert('Sign Up Successful', `Welcome, ${values.name}!`);
+    // resetForm();
     try {
       await AsyncStorage.setItem(
         'userCredentials',
@@ -67,10 +83,10 @@ const SignUpScreen: React.FC = (props: any) => {
       if (storedData) {
         const {email, password} = JSON.parse(storedData);
         console.warn(`Email: ${email}\nPassword: ${password}`);
+        Alert.alert('Sign Up Successful', `Welcome, ${values.name}!`);
       } else {
         console.warn('No stored credentials found.');
       }
-      // Alert.alert('Sign Up Successful', `Welcome, ${values.name}!`);
       resetForm(); // Reset form values
       setPasswordStrength('');
     } catch (error) {
