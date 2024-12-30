@@ -2,7 +2,7 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 
 # Getting Started
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+> **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
 ## Step 1: Start the Metro Server
 
@@ -77,3 +77,17 @@ To learn more about React Native, take a look at the following resources:
 - [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
 - [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
 - [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+
+# They chose designs
+
+- Formik was used to manage the documentation and Yup was used to validate the attachments to ensure -clear error messages.
+  -Local storage was used with AsyncStorage to store user credentials for things like "Remember Me".
+  -A password strength indicator has been added to help users create secure passwords.
+  -The app is organized into separate screens (Signup, Login, Welcome) for a clean and simple layout.
+
+# Any assumptions or limitations
+
+-Assumes the app is used by only one user at a time, as it doesn’t support multiple accounts.
+-Passwords are stored in local storage, which isn’t secure for real-world applications.
+-The app doesn’t connect to a backend or server; all validations are local.
+-Password strength rules are basic and might not cover all real-world security requirements.
